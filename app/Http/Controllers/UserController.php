@@ -9,21 +9,12 @@ use Yajra\DataTables\Facades\DataTables;
 
 class UserController extends Controller
 {
-    /**
-     * Display a listing of the resource.
-     *
-     * @return \Illuminate\Http\Response
-     */
     public function index()
     {
         return view('layouts.Users.index');
     }
 
-    /**
-     * Show the form for creating a new resource.
-     *
-     * @return \Illuminate\Http\Response
-     */
+
     public function list()
     {
         $users = User::whereUserType(2)->get();

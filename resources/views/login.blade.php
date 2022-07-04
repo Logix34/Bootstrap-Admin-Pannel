@@ -109,13 +109,14 @@
 <!-- Core plugin JavaScript-->
 <script src="{{asset("assets/js/js_easing/jquery.easing.min.js")}}"></script>
 {{--sweetalert2--}}
-<script src="sweetalert2.all.min.js"></script>
-
 <!-- Custom scripts for all pages-->
 <script src="{{asset("assets/js/sb-admin-2.min.js")}}"></script>
 
 
 <script>
+    setTimeout(() => {
+        $('.alert').alert('close');
+    }, 2000);
 
         @if(Session::has('success'))
         const Toast = Swal.mixin({

@@ -28,7 +28,7 @@ class AdminController extends Controller
 
         try {
             $remember = $request['remember'];
-            if (Auth::attempt(['username' => $request['email'], 'password' => $request['password']], $remember)) {
+            if (Auth::attempt(['username' => $request['email'], 'password' => $request['password'], 'user_type'=>1], $remember)) {
 
                 Session::flash('success', 'Login Successfully');
                 return redirect('dashboard');
@@ -73,7 +73,7 @@ class AdminController extends Controller
         $user = User::create($user_data);
         Auth::login($user);
         Session::flash('success','Registration  Successfully');
-        return redirect('admin/dashboard');
+        return redirect('dashboard');
     }
 /////////////////////////.......Forget Section..../////////////////
     public function forgetPassword()

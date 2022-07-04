@@ -10,7 +10,7 @@
         <div id="wrapper">
             @include('layouts.includes.side_bar')
             {{-- Div id= content-wrapper and content for the Top Bar--}}
-
+            <div id="content-wrapper" class="d-flex flex-column">
                     <!-- Main Content -->
                     <div id="content">
                         @include('layouts.includes.nav_bar')
